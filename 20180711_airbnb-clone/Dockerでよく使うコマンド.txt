@@ -1,7 +1,39 @@
-docker�ł悭�g���R�}���h
-$ docker rm $(docker ps -aq)
+docker�ł悭�g���R�}���h
 
-$  docker images -aq | xargs docker rmi
-$ docker-machine ip
+cd /c/Users/yonori/yoshi/0009_Bild/feature_add_performance/airbnb-clone-develop
 
-$ docker ps
+docker rm $(docker ps -aq)
+
+docker images -aq | xargs docker rmi
+docker-machine ip
+
+docker ps
+docker-compose -f docker-compose.dev.yml pull
+docker-compose -f docker-compose.dev.yml build
+docker-compose -f docker-compose.dev.yml up
+
+docker-compose -f docker-compose.dev.yml pull
+docker login
+
+docker stop 
+
+rails g controller performance new  
+
+# DB作りたくなったら
+$ docker-compose run --rm app rake db:create
+
+# マイグレーションしたくなったら
+$ docker-compose run --rm app rake db:migrate
+
+# seed実行したくなったら
+$ docker-compose run --rm app rake db:seed
+
+# コントローラー作成したくなったら(controller_nameを変更してどうぞ)
+$ docker-compose run --rm docker-compose.dev.yml rails generate controller performance new
+
+# Model作成したくなったら(model_nameを変更してどうぞ 引数にname:stringとかでnameカラムを作れます。)
+$ docker-compose run --rm app rails generate model model_name name:string 
+
+# ルーティング変更したくなったら(config/routes.rbを編集後実行)
+$ docker-compose run --rm app rake routes
+
