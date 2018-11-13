@@ -1,0 +1,46 @@
+Rudy　install
+
+DevKit-mingw64-64-4.7.2-20130224-1432-sfx（マストか不明）
+
+Ruby+Devkit 2.5.3-1 (x64) 
+
+そもそもDockerで実行するのに上記が必要なのかは不明
+
+
+SQL３　install　
+sqlite-tools-win32-x86-3250200
+sqlite-dll-win64-x64-3250200
+
+
+```sqlite3
+sqlite3 sample.sqlite3
+```
+
+sqlite3.dll
+C:\Windows\System32
+へ移動
+
+RubyGemsの更新とBundlerインストール
+
+```cmd
+gem update --system
+```
+```cmd
+gem install bundler
+```
+```cmd
+gem install rails
+```
+
+cmdにイライラしたので
+Console2のインストール
+https://github.com/atsuoishimoto/console2-ime/releases/tag/console-2-b148-ime
+
+nyagosインストール
+https://github.com/zetamatta/nyagos/releases
+
+http://vdeep.net/console2-nyagos
+
+これでgitもサクサク
+
+
