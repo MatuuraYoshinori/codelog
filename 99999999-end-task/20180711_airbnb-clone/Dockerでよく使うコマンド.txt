@@ -1,7 +1,0 @@
-dockerでよく使うコマンド
-$ docker rm $(docker ps -aq)
-
-$  docker images -aq | xargs docker rmi
-$ docker-machine ip
-
-$ docker ps
