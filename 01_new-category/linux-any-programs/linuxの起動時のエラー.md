@@ -45,3 +45,15 @@ blacklist i2c_nvidia_gpuを
 # read only のファイルviで書き込む
 http://tm.root-n.com/unix:command:vim:readlonly_write
 
+書き込んだけど、再起動したときに出るエラー表示は変わらず
+
+
+#   解決しそうにない問題
+そのバグレポートを読むと、USB Type-Cインターフェイスを備えたNVIDIAグラフィックカードのカーネルにコードが導入されているようです。その場合、NVIDIA I2Cドライバーが読み込まれます。検出ロジックに問題があり、互換性のあるハードウェアが存在しない場合、I2Cドライバーが正しくロードされていないようです。
+
+とにかく、バグレポートの最後にパッチが作成されました。このパッチがメインラインカーネルにマージされ、カーネルアップデートとして現れるのを待つ必要があります。
+
+エラーメッセージは無害です。
+
+
+https://forums.opensuse.org/showthread.php/543847-nvidia-gpu-i2c-timeout-error-e0000000
