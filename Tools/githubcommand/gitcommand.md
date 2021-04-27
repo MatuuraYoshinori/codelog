@@ -1,3 +1,8 @@
+[Qiita コマンド集](https://qiita.com/drafts/adf683c4cc2f8cdd6a24/edit)から
+
+#自分で編集して使いやすくすること
+
+
 # はじめに
 gitのコマンドライン操作について手元のメモを書き出してみた
 

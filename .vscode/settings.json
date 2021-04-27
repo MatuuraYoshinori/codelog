@@ -1,0 +1,7 @@
+{
+    "editor.minimap.enabled": true,
+    "breadcrumbs.enabled": true,
+    "editor.renderWhitespace": "all",
+    "pasteImage.path": "{currentFileDir}/images/",
+    "pasteImage.basePath": "${currentFileDir}/images"
+}
