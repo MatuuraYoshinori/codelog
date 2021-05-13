@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>02:00 - Pitchtimer</title>
+
+    <meta name="Description" content="PitchTimer is a simple countdown timer.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="title" content="PitchTimer">
+    <link rel="stylesheet" href="./timer.css" type="text/css" media="screen" title="Normal">
+    <style>
+      p{
+          font-family: 'Libre Baskerville', serif;
+          font-size: 40px;
+          }
+    </style>
+  </head>
+
+  <body style="text-align: center;">
+    <div id="textWrapper">
+      <h2><p id="p">02:00</p></h2>
+      <h3>
+          <p>
+          残り時間<span id="timer"></span>
+          </p>
+          <script>
+            var countdown = function (due) {
+                var now = new Date();
+                var rest = due.getTime() - now.getTime();
+                var sec = Math.floor(rest / 1000 % 60);
+                var min = Math.floor(rest / 1000 / 60) % 60;
+                var hours = Math.floor(rest / 1000 / 60 / 60) % 24;
+                var days = Math.floor(rest / 1000 / 60 / 60 / 24);
+                var count = [days, hours, min, sec];
+
+                return count;
+            }
+
+            var goal = new Date();
+            goal.setHours(23);
+            goal.setMinutes(59);
+            goal.setSeconds(59);
+
+            console.log(countdown(goal));
+            var counter = countdown(goal);
+            var time =counter[2] + 'minites' + counter[3] + 'seconds';
+            document.getElementById('timer').textContent = time;
+
+        </script>
+    </h3>
+    </div>
+
+    <audio id="alarm" style="display:none;" preload="auto" autobuffer="" src="./timeUp.mp3" type="audio/mpeg">
+    </audio>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <script type="text/javascript">
+      Pitch.defaultText = "Pitchtimer";
+      Pitch.startTime = 0;
+      Pitch.endTime = 30;
+      Pitch.parseError = "none";
+      Pitch.volume = 1;
+      Pitch.canAlert = false;
+    </script>
+    <script src="./Pitch3.js" type="text/javascript"></script>
+    <script src="./Time.js" type="text/javascript"></script>
+
+  </body>
+</html>
+
+
+
+<!doctype html>
+<html>
