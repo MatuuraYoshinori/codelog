@@ -2,8 +2,12 @@
 
 # 入力値取得
 $strn.chomp.split(/\R\)
+
+input = gets.chomp.split
+
 //入力値が１行の場合　
 input = gets.split.map(&:to_i)
+input = gets.chomp.split.map(&:to_s)
 
 //入力値を一括で配列格納
 input = readlines.map &:to_i
@@ -34,6 +38,9 @@ if i == 1
 end
 
 // readline 二次配列
+lines = readlines(chomp: true).map{|line| line.split(' ').map(&:to_i)}
+lines = STDIN.readlines(chomp: true).map{|line| line.split(' ').map(&:to_i)}
+
 cline = STDIN.readlines.map{|line| line.split(" ").map(&:to_i)}
 #city num
 
@@ -45,7 +52,7 @@ end
 
 r_1**2 =< (x-xc)**2 +(y - yc)**2 <= r_2**2
 
-
+5.times{}
 
 エレメント内にカウントダウンタイマーを設置
 文法的に正しい、英語表記にする

@@ -1,0 +1,4 @@
+https://github.com/lifeparticle/Ruby-Cheatsheet
+
+rubyのチートシートをもとに
+rubyを講座動画化する
