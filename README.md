@@ -1,11 +1,1 @@
-  # 日々のコード作業管理をGitでしていた人が居たのでやってみる
-これは良いなと思ってやってみた
-
-QuitaでのTodoリストをここにリンクで貼っておく
-[TodoList](https://qiita.com/yonori/private/5e3c587b29a705c189b2)
-
-
-改善点
-
-デイリーでまとめても仕方ない
-カテゴリ分けしておかないと、あとでたどれない
+  # There was a person who manages daily code work with Git, so I will try it
